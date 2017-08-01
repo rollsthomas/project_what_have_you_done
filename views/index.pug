@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+  .gridWrapperHome
+    .logo 
+      img(src='static/img/flag-icon.jpg' alt="US flag")
+    
+    h1 Enter your zipcode
+    
+    form(action="/reps" method="post")
+      input#zipcode(type="text" name="zipcode")
+      input#zipcodeBtn(type="submit" name="submit" value="Go")  
+    
+    

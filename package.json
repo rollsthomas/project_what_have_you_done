@@ -1,0 +1,26 @@
+{
+  "name": "project_what_have_you_done",
+  "version": "1.0.0",
+  "description": "Build an application to help track the legislative activities of your local representatives.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rollsthomas/project_what_have_you_done.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rollsthomas/project_what_have_you_done/issues"
+  },
+  "homepage": "https://github.com/rollsthomas/project_what_have_you_done#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5"
+  }
+}

@@ -1,0 +1,46 @@
+/* mobile home */
+.gridWrapperHome{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  justify-items: center;
+}
+
+h1{
+  height: 1em;
+  color: #04090D;
+  font-family: helvetica, sans-serif;
+}
+
+form{
+  width: 100%;
+}
+
+#zipcode{
+  display:block;
+  width: 80%;
+  height: 30px;
+  margin: 0 auto;
+  border: 2px solid gray;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#zipcodeBtn{
+  display: block;
+  margin: 20px auto;
+  width: 60%;
+  height: 1.6em;
+  font-size: 1.5em;
+  background-color: #12A7E1;
+}
+
+/* Mobile reps*/
+
+#repsTitle{
+  text-decoration: underline;
+}
+
+.chamber {
+  font-size: 2em;
+}

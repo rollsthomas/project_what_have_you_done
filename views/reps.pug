@@ -1,0 +1,26 @@
+extends layout.pug
+
+block content
+  .gridWrapperHome
+    .logo 
+      img(src='static/img/flag-icon.jpg' alt="US flag")
+    h1#repsTitle Congress Members
+    ul      
+      li.chamber House
+      each val in passedMembers
+        if (val.chamber == "house")
+          li
+            p: a(href='')= val.name
+            p= val.party
+            p= val.phone
+            p= val.chamber
+      li.chamber Senate
+      each val in passedMembers
+        if (val.chamber === "senate")
+          li
+            p= val.name
+            p= val.party
+            p= val.phone
+            p= val.chamber
+    
+//- Does not show up in html
