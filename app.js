@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const app = express();
 
 
-var port=Number(process.env.PORT || 3000);
 
 //access to static assets in public folder. css/images
 app.use('/static', express.static('public'));
