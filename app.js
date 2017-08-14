@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+const port = process.env.PORT || '3000'
+
 //for pug
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
@@ -23,6 +25,4 @@ app.use((err, req, res, next) => {
     res.render('error')
 });
 
-app.listen(3000, function(){
-  console.log('listening at port 3000');
-})
+app.listen(port)
