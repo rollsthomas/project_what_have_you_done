@@ -86,6 +86,7 @@ function newMember(data){
    this.bioId = data.bioguide_id
 };
 
+////used to create object members to add to array
 function newBills(data){
   this.id = data.bill_id,
   this.type = data.vote_type.charAt(0).toUpperCase() + data.vote_type.slice(1), //On Passage

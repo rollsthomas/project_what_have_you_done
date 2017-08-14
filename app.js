@@ -3,10 +3,14 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+<<<<<<< HEAD
 var port=Number(process.env.PORT || 3000);
 
 //access to static assets in public folder. css/images
 app.use('/static', express.static('public'));
+=======
+const port = process.env.PORT || '3000'
+>>>>>>> db311d7d3eb08a19d09b247ce42e1fafb4484730
 
 //for pug
 app.use(bodyParser.urlencoded({ extended: false}));

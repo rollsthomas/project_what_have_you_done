@@ -4,7 +4,9 @@
   "description": "Build an application to help track the legislative activities of your local representatives.",
   "main": "app.js",
   "scripts": {
+
     "test": "echo \"Error: no test specified\" && exit 1",
+
     "start": "node app.js"
   },
   "repository": {
@@ -23,7 +25,5 @@
     "express": "^4.15.3",
     "pug": "^2.0.0-rc.2"
   },
-  "devDependencies": {
-    "jshint": "^2.9.5"
-  }
+  "devDependencies": {}
 }
