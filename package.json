@@ -21,7 +21,6 @@
   "homepage": "https://github.com/rollsthomas/project_what_have_you_done#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "cookie-parser": "^1.17.2",
     "express": "^4.15.3",
     "pug": "^2.0.0-rc.2"
   },
