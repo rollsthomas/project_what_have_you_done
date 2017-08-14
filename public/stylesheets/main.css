@@ -146,13 +146,18 @@ ul {
     width: 18rem;
     height: 300px;
     overflow: auto;
-    padding: 6px; }
+    padding: 10px 6px; }
   .bills .summary {
     height: 4rem;
     overflow: hidden;
     text-overflow: ellipsis; }
     .bills .summary:hover {
       text-overflow: auto; }
+  .bills .bill-id {
+    margin: 0; }
+  .bills .govTrack {
+    margin: 0;
+    font-size: 0.6rem; }
 
 /*
 width: 200px;

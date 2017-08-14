@@ -63,15 +63,12 @@ router.get('/member', (req, res, next) => {
         return bill.id === billSum.bill_id;
       });
       bill.summary = sum.summary;
-      console.log(bill.summary);
       count++
       if(count > total - 1 || res.locals.bills == []) {
         next()
       }
     }); //end sunlight.bills
-    //console.log('before Each');
   });//end forEach
-  //console.log('After Each');
 });
 router.get('/member', (req, res, next) => {
   let target = res.locals.target;  //member
@@ -93,17 +90,10 @@ function newBills(data){
   this.id = data.bill_id,
   this.type = data.vote_type.charAt(0).toUpperCase() + data.vote_type.slice(1), //On Passage
   this.result = data.result,
-  this.date = data.voted_at.slice(0, 10)
-  //this.link_id = this.id.toString().match(/[^-]*/i)[0],
-  //console.log('link_id', this.link_id);
-  //data.link = `https://www.govtrack.us/congress/bills/115/${link_id}`
-
+  this.date = data.voted_at.slice(0, 10),
+  govLink = data.bill_id.slice(0, data.bill_id.indexOf('-')),
+  this.govTrack = `https://www.govtrack.us/congress/bills/115/${govLink}`
 };
 
-
-function billsData(){
-
-};
-//https://www.govtrack.us/congress/bills/115/hr3180
 
 module.exports = router

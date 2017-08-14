@@ -21,6 +21,7 @@ block content
         each bill in allBills
           li
             p.bill-id= bill.id
+            a.govTrack(href= bill.govTrack rel="external" target="_blank") Govtrack
             hr
             p Result: #{bill.result}
             p= bill.date
