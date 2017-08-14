@@ -2,9 +2,10 @@
   "name": "project_what_have_you_done",
   "version": "1.0.0",
   "description": "Build an application to help track the legislative activities of your local representatives.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/rollsthomas/project_what_have_you_done#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.17.2",
     "express": "^4.15.3",
     "pug": "^2.0.0-rc.2"
   },
