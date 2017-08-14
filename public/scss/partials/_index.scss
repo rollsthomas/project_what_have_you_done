@@ -1,0 +1,40 @@
+
+/* mobile home */
+.wrapperHome{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto auto;
+  justify-items: center;
+  font-family: $font-family-primary;
+  h1{
+    font-size: 2rem;
+    height: 2rem;
+    color: $color-h-tag;
+    text-align: center;
+  }
+
+  form{
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  #zipcode{
+    display: block;
+    width: 50vw;
+    height: 2rem;
+    margin: 0 auto;
+    border: $border;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  #zipcodeBtn{
+    display: block;
+    margin: 20px auto;
+    width: 30vw;
+    height: 2.5rem;
+    padding-bottom: 3px;
+    font-size: 1.5rem;
+    background-color: $color-btn;
+  }
+}

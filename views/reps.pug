@@ -1,26 +1,32 @@
 extends layout.pug
 
 block content
-  .gridWrapperHome
+  section.wrapperHome
     .logo 
       img(src='static/img/flag-icon.jpg' alt="US flag")
     h1#repsTitle Congress Members
     ul      
       li.chamber House
       each val in passedMembers
-        if (val.chamber == "house")
-          li
-            p: a(href='')= val.name
-            p= val.party
-            p= val.phone
-            p= val.chamber
+        if (val.chamber == "House")
+          li.reps
+            div
+              -var id = val.bioId
+              p.name: a(href="/member?id=" + id)= val.name
+              p.party(class=val.party === "R" ? "party-red" : "party-blue")= val.party
+              p.phone
+                a(href=`tel:+1-${val.phone}`) tel: 1-#{val.phone}
       li.chamber Senate
       each val in passedMembers
-        if (val.chamber === "senate")
-          li
-            p= val.name
-            p= val.party
-            p= val.phone
-            p= val.chamber
+        if (val.chamber == "Senate")
+          li.reps
+            div
+              -var id = val.bioId
+              p.name: a(href="/member?id=" + id)= val.name
+              p.party(class=val.party === "R" ? "party-red" : "party-blue")= val.party
+              p.phone
+                a(href=`tel:+1-${val.phone}`) tel: 1-#{val.phone}
+            
+            
     
-//- Does not show up in html
+//- Does not show up in html 

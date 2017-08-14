@@ -1,0 +1,59 @@
+
+///* Mixins */
+
+//base//
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin shadows($shadows...) {
+  box-shadow: $shadows;
+}
+
+
+//elements//
+@mixin member-container {
+  display: flex;
+  justify-content: space-evenly;
+  border: $border;
+  @content;
+}
+
+@mixin name-party{
+  margin: 0.5rem auto;
+  text-align: left;
+}
+
+@mixin member-link{
+  display: inline-block;
+  width: 100%;
+  text-decoration: underline;
+  color: $color-fonts;
+  border-radius: 2px;
+  &:hover{
+    background-color: #897f8f;
+  }
+}
+
+@mixin name{
+  width: 75%;
+  font-size: 1.2rem;
+}
+
+@mixin link{
+  /* visited link */
+  &:visited {
+      color: #1310bb;
+  }
+
+  /* mouse over link */
+  &:hover {
+      color: #AF6AE8;
+  }
+
+  /* selected link */
+  &:active {
+      color: yellow;
+  }
+}

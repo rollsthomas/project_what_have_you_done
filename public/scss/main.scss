@@ -1,0 +1,34 @@
+/* Base */
+*{
+  box-sizing: border-box;
+}
+//root font size
+
+:root{
+  font-size: 24px;
+  @media (max-width: 520px){
+    font-size: 16px;
+  }
+}
+
+.logo{
+  position: absolute;
+  @media (max-width: 965px){
+    position: static;
+  }
+}
+
+
+
+//Partial imports
+@import 'partials/_definitions',
+        'partials/_mixins',
+        'partials/_index',
+        'partials/_reps',
+        'partials/_member';
+
+
+
+
+//\:root
+//  font-size: 16px;

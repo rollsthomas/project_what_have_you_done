@@ -1,0 +1,49 @@
+
+/* Mobile reps*/
+
+#repsTitle{
+  text-decoration: underline;
+  margin-top: 0;
+}
+
+ul{
+  list-style: none;
+  .chamber {
+    font-size: 1.6rem;
+  }
+  li{
+    width: 10rem;
+    margin-bottom: 1rem;
+  }
+  .chamber{
+    text-decoration: underline;
+  }
+}
+
+.reps{
+  div{
+    @include member-container{
+      flex-wrap: wrap;
+    };
+  }
+
+  .name, .party{
+    @include name-party;
+  }
+  .name{
+    @include name;
+    a{
+      @include member-link;
+    }
+  }
+  .party{
+    &-red{color:$color-party-rep;}
+    &-blue{color:$color-party-dem;}
+  }
+  .phone{
+    margin: 0 0 5px 10px;
+    a{
+      color: $color-tel;
+    }
+  }
+}

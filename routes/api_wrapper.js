@@ -12,11 +12,19 @@ class Sunlight {
   }
 
   member(id, callback){
-    this.sendRequest(`legislators?per_page=all`, callback);
+    this.sendRequest(`legislators?bioguide_id=${id}`, callback);
+  }
+
+  votedBills(id, callback){
+      this.sendRequest(`votes?voter_ids.${id}__exists=true&question=On+Passage`, callback)
+  }
+
+  bills(id, callback){
+    this.sendRequest(`bills?history.active=true&order=last_action_at&bill_id=${id}&fields=summary`, callback)
   }
 
   getPhoto(id, callback){
-    options.url = "https://theunitedstates.io/images/congress/225x275/B001273.jpg"
+    options.url = `https://theunitedstates.io/images/congress/225x275/B001273.jpg`
     request(options, function(error, response, body){
       callback(body);
     });
@@ -24,9 +32,10 @@ class Sunlight {
 
   sendRequest(url, callback){
     options.url = `${baseUri}${url}`;
-    //console.log(options.url);
+    //console.log(options.url, 'URL');
     request(options, function(error, response, body){
       if(!error && response.statusCode == 200){
+        //console.log(JSON.parse(body));
         callback(JSON.parse(body))
       } else{
         console.log("Error", error);

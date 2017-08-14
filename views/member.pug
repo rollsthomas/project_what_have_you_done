@@ -1,0 +1,31 @@
+extends layout.pug
+
+block content
+  .wrapperHome
+    .logo 
+      img(src='static/img/flag-icon.jpg' alt="US flag")
+    h1 Member of the #{target.chamber}
+    div.target   
+      -var id = target.bioId
+      p.name= target.name
+      p.party(class=target.party === "R" ? "party-red" : "party-blue")= target.party
+      p.phone
+        a(href=`tel:+1-${target.phone}`) tel: 1-#{target.phone}
+  
+    br
+    p#billsTitle Recent Bills
+    ul.bills
+      if ('noData' in allBills )
+        li.noData= allBills.noData
+      else
+        each bill in allBills
+          li
+            p.bill-id= bill.id
+            hr
+            p Result: #{bill.result}
+            p= bill.date
+            if (bill.summary === null)
+              p No summary data
+            else
+              p= bill.summary
+        
